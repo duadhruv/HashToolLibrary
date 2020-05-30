@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fadingEdgeLength="20dp"
+    app:cardBackgroundColor="@color/ActivityBg"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="40dp"
+    app:cardMaxElevation="40dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        tools:context=".HashListV2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:minWidth="200dip"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/hash_list_v2_search_bg"
+                android:drawableLeft="@drawable/search_24"
+                android:drawablePadding="2dp"
+                android:ems="5"
+                android:fontFamily="@font/avenirltstdlt"
+                android:hint="Search"
+                android:inputType="textPersonName"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+
+                android:paddingBottom="4dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/list"
+                app:layout_constraintEnd_toEndOf="@id/scroll"
+                app:layout_constraintStart_toStartOf="@id/scroll"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/scroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </ScrollView>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/norecords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="No Records!"
+                android:textAlignment="center"
+                android:textColor="#FF8F00"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
