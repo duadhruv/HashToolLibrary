@@ -24,12 +24,7 @@
 
     <style name="dialogTheme" parent="Theme.MaterialComponents.Dialog">
         <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowSharedElementEnterTransition">
-            @transition/changebounds
-        </item>
-        <item name="android:windowSharedElementExitTransition">
-            @transition/changebounds
-        </item>
+
         <item name="colorControlNormal">#2196F3</item>
         <item name="windowNoTitle">true</item>
         <!--        <item name="android:backgroundDimEnabled">false</item>-->
