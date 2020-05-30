@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HashTool</string>
+    <string name="dbcache">DbSettingsCache</string>
 </resources>
