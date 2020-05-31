@@ -26,6 +26,18 @@ public class ColumnWiseResultHashMap implements Serializable, Cloneable {
         rowCount=resultColumn.getValues().size();
     }
 
+    public void removeRow(int position)
+    {
+        if(getRowCount()>position)
+        {
+            for (ResultColumn column:
+                 QueryResult.values()) {
+                column.getValues().remove(position);
+
+            }
+        }
+    }
+
     public void removeResultColumn(String column)
     {
         if(QueryResult.get(column.toLowerCase())!=null)
