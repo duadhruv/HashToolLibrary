@@ -20,6 +20,8 @@
         android:launchMode="singleInstance"
         android:theme="@style/dialogTheme" />
 
+        <activity android:name="hash_widgets.HashBarcodeScanner"></activity>
+
     <activity android:name="hash_widgets.HashList"
         android:launchMode="singleInstance"
         android:theme="@style/dialogTheme"></activity>
