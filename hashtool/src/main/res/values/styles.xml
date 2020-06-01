@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/text_box</item>
-        <item name="colorAccent">#110F0F</item>
-        <item name="colorControlNormal">#050404</item>
-        <item name="colorControlActivated">#000000</item>
-        <item name="android:textColor">@color/textcolor</item>
-        <item name="hintTextAppearance">@style/TextAppearance.App.TextInputLayout</item>
-
-    </style>
 
 
-    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
-        <item name="android:textColor">#DFC05E</item>
-        <item name="android:textSize">12sp</item>
 
-    </style>
+
 
 
 
@@ -31,23 +19,25 @@
 
 
 
-    <style name="Widget.Design.TextInputLayout" parent="AppTheme">
-        <item name="hintTextAppearance">@style/AppTheme.TextFloatLabelAppearance</item>
-        <item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>
-        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
-        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
-    </style>
+    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:background">@color/Red</item>
+        <item name="colorAccent">@android:color/white</item>
 
-    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
-        <!-- Floating label appearance here -->
-        <item name="android:textColor">#DFC05E</item>
+        <item name="colorControlNormal">@android:color/holo_red_dark</item>
+        <item name="colorControlActivated">@android:color/holo_green_dark</item>
+        <item name="colorControlHighlight">@android:color/holo_purple</item>
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
-        <!-- Error message appearance here -->
-        <item name="android:textColor">#ff0000</item>
-        <item name="android:textSize">12sp</item>
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_box</item>
+        <item name="colorAccent">#110F0F</item>
+        <item name="colorControlNormal">#050404</item>
+        <item name="colorControlActivated">#000000</item>
+        <item name="android:textColor">@color/textcolor</item>
+        <item name="hintTextAppearance">@style/TextAppearance.App.TextInputLayout</item>
+
     </style>
 
 
