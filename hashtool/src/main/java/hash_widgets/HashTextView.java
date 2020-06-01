@@ -206,7 +206,7 @@ public class HashTextView extends ConstraintLayout {
 
         a.recycle();
         setLabelName();
-        setType();
+        setType(type);
         progressBar = view.findViewById(R.id.progressBar);
         if(type!=9)
         {
@@ -319,7 +319,7 @@ public class HashTextView extends ConstraintLayout {
             camimage.setImageResource(R.drawable.camera_img);
         }
 
-        setType();
+        setType(type);
     }
 
     public void setLoading()
@@ -538,7 +538,7 @@ public class HashTextView extends ConstraintLayout {
         //setType();
         if(!isLocked)
         {
-            setType();
+            setType(type);
         }
         else
         {
@@ -626,7 +626,7 @@ public class HashTextView extends ConstraintLayout {
             } else if (text.toLowerCase().equals("<#UNLOCK>".toLowerCase())) {
                 et.setEnabled(true);
                 isLocked=false;
-                setType();
+                setType(type);
             } else if (text.toLowerCase().contains("<#UNLOCK>".toLowerCase())) {
                 text = text.replaceAll("(?i)<#UNLOCK>", "");
                 if(text.equalsIgnoreCase("<#Clear>"))
@@ -643,7 +643,7 @@ public class HashTextView extends ConstraintLayout {
 
                 isLocked=false;
                 et.setEnabled(true);
-                setType();
+                setType(type);
             } else if (text.toLowerCase().contains("<#LOCK>".toLowerCase())) {
                 Log.w("hashtextview","contains");
                 text = text.replaceAll("(?i)<#LOCK>", "");
@@ -724,8 +724,9 @@ public class HashTextView extends ConstraintLayout {
         this.value=value.trim(); }
 
 
-    public void setType()
+    public void setType(int type)
     {
+        this.type=type;
 
         switch (type)
         {
