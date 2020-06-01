@@ -61,13 +61,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="4dp"
         android:animateLayoutChanges="true"
-        android:textColorHint="@color/hintcolor"
+        android:textColorHint="@color/textinputlayout_selector"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
 
-        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
