@@ -708,6 +708,7 @@ public class HashTextView extends ConstraintLayout {
 
         this.value=value.trim(); }
 
+
     public void setType()
     {
 
