@@ -37,7 +37,7 @@ dependencies {
 
     implementation files('libs/jtds-1.3.0.jar')
     implementation files('libs/sqljdbc4.jar')
-    
+
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     implementation 'com.google.android.material:material:1.1.0-alpha04'
