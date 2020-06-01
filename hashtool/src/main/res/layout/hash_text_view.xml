@@ -52,7 +52,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/usernamelayout"
-        style="@style/LoginTextInputLayoutStyle"
+        android:theme="@style/LoginTextInputLayoutStyle"
+
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
@@ -61,7 +62,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="4dp"
         android:animateLayoutChanges="true"
-        android:textColorHint="@color/textinputlayout_selector"
+
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
