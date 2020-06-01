@@ -45,7 +45,7 @@ public class HashTextView extends ConstraintLayout {
     int ImeOption=-1;
     String labelname = "NULL";
     String value;
-    int type;
+    public int type;
     View view;
     TextInputLayout textInputLayout;
     TextInputEditText et;
@@ -708,7 +708,7 @@ public class HashTextView extends ConstraintLayout {
 
         this.value=value.trim(); }
 
-    private void setType()
+    public void setType()
     {
 
         switch (type)
