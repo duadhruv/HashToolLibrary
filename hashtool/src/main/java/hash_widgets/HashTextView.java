@@ -5,10 +5,13 @@ import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -67,6 +70,9 @@ public class HashTextView extends ConstraintLayout {
     int  visible;
 
     TextView hinttxt;
+
+    int hintbgcolor,edittextbgcolor;
+    String fontname;
 
     public boolean isLocked() {
         return isLocked;
@@ -152,7 +158,6 @@ public class HashTextView extends ConstraintLayout {
         flowview = view.findViewById(R.id.flowview);
         camimage=view.findViewById(R.id.camimg);
         bg = view.findViewById(R.id.bg);
-        //et.setBackgroundResource(R.drawable.edit_text_bg);
         hinttxt=view.findViewById(R.id.hinttxt);
 
         if(type!=9) {
@@ -160,8 +165,18 @@ public class HashTextView extends ConstraintLayout {
             //LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,  textInputLayout.getMeasuredHeight());
             bg.getLayoutParams().height = et.getMeasuredHeight();
             bg.requestLayout();
+            ((GradientDrawable)bg.getBackground()).setColor(edittextbgcolor);
+            if(fontname!=null) {
+                et.setTypeface(getFont(fontname,context));
+                textInputLayout.setTypeface(getFont(fontname,context));
+                if(hinttxt!=null) {
+                    hinttxt.setTypeface(getFont(fontname,context));
+                }
+            }
+            if(hinttxt!=null) {
+                ((GradientDrawable) hinttxt.getBackground()).setColor(hintbgcolor);
+            }
         }
-        //bg.setLayoutParams(layoutParams);
 
 
 
@@ -844,7 +859,26 @@ public class HashTextView extends ConstraintLayout {
         }catch (Exception e){}
 
 
+        try {
+            hintbgcolor = a.getColor(R.styleable.HashTextView_HintBackgroundColor,getResources().getColor(R.color.ActivityBg));
+            edittextbgcolor = a.getColor(R.styleable.HashTextView_HintBackgroundColor,getResources().getColor(R.color.ReportColor));
+        }
+        catch (Exception e)
+        {}
+
+        try {
+            fontname = a.getString(R.styleable.HashTextView_FontAsset);
+        }
+        catch (Exception e)
+        {}
+
     }
 
-
+    public static Typeface getFont(String name, Context context) {
+        Typeface myTypeface = Typeface.createFromAsset(context.getAssets(), "fonts/" + name);
+        return myTypeface;
+    }
 }
+
+
+

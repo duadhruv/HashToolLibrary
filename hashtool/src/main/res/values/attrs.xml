@@ -22,6 +22,11 @@
             <enum name="Visible" value="1"></enum>
             <enum name="Invisible" value="0"></enum>
         </attr>
+
+        <attr name="HintBackgroundColor" format="color"></attr>
+        <attr name="EdittextBackgroundColor"  format="color"></attr>
+        <attr name="FontAsset" format="string"></attr>
+
         <attr name="LabelName" format="string"/>
         <attr name="AllowBlank" format="enum">
             <enum name="False" value="0"></enum>

@@ -17,7 +17,7 @@
 
         <item name="colorControlNormal">@android:color/holo_red_dark</item>
         <item name="colorControlActivated">@android:color/holo_green_dark</item>
-        <item name="colorControlHighlight">@android:color/holo_purple</item>
+        <item name="colorControlHighlight">#DAC97D</item>
         <item name="android:textSize">12sp</item>
     </style>
 
