@@ -86,6 +86,7 @@
 
             android:selectAllOnFocus="true"
             android:singleLine="true"
+            android:text="haha"
             android:textColor="@android:color/white"
             android:visibility="visible" />
 
