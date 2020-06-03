@@ -1,6 +1,7 @@
 package hash_widgets;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -179,6 +180,17 @@ public class HashTextView extends ConstraintLayout {
         }
 
 
+
+        ColorStateList myColorStateList = new ColorStateList(
+                new int[][]{
+                        new int[]{}
+                },
+                new int[] {
+                        hintcolor
+                }
+        );
+
+        et.setHintTextColor(myColorStateList);
 
         if(hinttxt!=null)
         {
