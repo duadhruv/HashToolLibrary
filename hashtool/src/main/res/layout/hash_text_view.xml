@@ -24,21 +24,6 @@
         app:layout_constraintTop_toTopOf="@+id/usernamelayout"
         tools:layout_editor_absoluteX="4dp" />
 
-    <TextView
-        android:id="@+id/hinttxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/hashtextview_hint_bg"
-        android:gravity="bottom"
-        android:paddingStart="4dp"
-        android:paddingEnd="6dp"
-        android:text="Target"
-        android:textColor="@android:color/transparent"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/usernamelayout"
-        app:layout_constraintTop_toTopOf="@+id/usernamelayout" />
-
     <ProgressBar
         android:id="@+id/progressBar"
         style="@style/Widget.AppCompat.ProgressBar"
@@ -92,6 +77,21 @@
             android:visibility="visible" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/hinttxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/hashtextview_hint_bg"
+        android:gravity="bottom"
+        android:paddingStart="4dp"
+        android:paddingEnd="6dp"
+        android:text="Target"
+        android:textColor="@android:color/transparent"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/usernamelayout"
+        app:layout_constraintTop_toTopOf="@+id/usernamelayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

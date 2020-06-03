@@ -24,6 +24,9 @@
         </attr>
 
         <attr name="HintBackgroundColor" format="color"></attr>
+        <attr name="HintColor" format="color"></attr>
+        <attr name="HintHighlightColor" format="color"></attr>
+        <attr name="TextColor" format="color"></attr>
         <attr name="EdittextBackgroundColor"  format="color"></attr>
         <attr name="FontAsset" format="string"></attr>
 

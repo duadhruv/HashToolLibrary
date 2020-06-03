@@ -71,7 +71,7 @@ public class HashTextView extends ConstraintLayout {
 
     TextView hinttxt;
 
-    int hintbgcolor,edittextbgcolor;
+    int hintbgcolor,edittextbgcolor,textcolor,hintcolor,hinthighlightcolor;
     String fontname;
 
     public boolean isLocked() {
@@ -189,11 +189,16 @@ public class HashTextView extends ConstraintLayout {
                     if(hasFocus)
                     {
                         hinttxt.setVisibility(visible);
+                        hinttxt.setTextColor(hinthighlightcolor);
                     }
                     else
                     {
                         if(value.length()==0) {
                             hinttxt.setVisibility(GONE);
+                        }
+                        else
+                        {
+                            hinttxt.setTextColor(hintcolor);
                         }
                     }
                 }
@@ -863,6 +868,9 @@ public class HashTextView extends ConstraintLayout {
         try {
             hintbgcolor = a.getColor(R.styleable.HashTextView_HintBackgroundColor,getResources().getColor(R.color.ActivityBg));
             edittextbgcolor = a.getColor(R.styleable.HashTextView_HintBackgroundColor,getResources().getColor(R.color.ReportColor));
+            hintcolor = a.getColor(R.styleable.HashTextView_HintColor,Color.parseColor("#868686"));
+            hinthighlightcolor = a.getColor(R.styleable.HashTextView_HintHighlightColor,Color.parseColor("#00ADB5"));
+            textcolor = a.getColor(R.styleable.HashTextView_TextColor,Color.parseColor("#ffff"));
         }
         catch (Exception e)
         {}
