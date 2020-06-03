@@ -183,6 +183,7 @@ public class HashTextView extends ConstraintLayout {
         if(hinttxt!=null)
         {
             hinttxt.setVisibility(GONE);
+            hinttxt.setTextColor(hintcolor);
             et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
@@ -262,6 +263,7 @@ public class HashTextView extends ConstraintLayout {
                     if(hinttxt!=null)
                     {
                         hinttxt.setVisibility(VISIBLE);
+                        hinttxt.setTextColor(hintcolor);
                     }
                 }
                 else
@@ -529,6 +531,7 @@ public class HashTextView extends ConstraintLayout {
         errset=true;
         if(hinttxt!=null) {
             hinttxt.setVisibility(VISIBLE);
+            hinttxt.setTextColor(hintcolor);
         }
         mainview.startAnimation(shake);
         //cardView.startAnimation(shake);
