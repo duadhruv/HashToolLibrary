@@ -191,17 +191,19 @@ public class HashTextView extends ConstraintLayout {
         );
 
         et.setHintTextColor(myColorStateList);
+        textInputLayout.setHintTextColor(myColorStateList);
 
         if(hinttxt!=null)
         {
             hinttxt.setVisibility(GONE);
             hinttxt.setTextColor(hintcolor);
+
             et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
                     if(hasFocus)
                     {
-                        hinttxt.setVisibility(visible);
+                        hinttxt.setVisibility(VISIBLE);
                         hinttxt.setTextColor(hinthighlightcolor);
                     }
                     else
