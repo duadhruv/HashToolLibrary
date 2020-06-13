@@ -65,7 +65,7 @@
         <item name="colorControlNormal">#050404</item>
         <item name="colorControlActivated">#FFD600</item>
         <item name="android:textColor">@color/textcolor</item>
-        <item name="hintTextAppearance">@style/TextAppearance.App.TextInputLayout</item>
+
 
     </style>
 

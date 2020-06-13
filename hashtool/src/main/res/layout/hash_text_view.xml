@@ -54,7 +54,6 @@
 
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +73,7 @@
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:textColor="@android:color/white"
+            android:textColorHint="#75FFFFFF"
             android:visibility="visible" />
 
     </com.google.android.material.textfield.TextInputLayout>
