@@ -94,7 +94,7 @@ public class HashBarcodeScanner extends AppCompatActivity {
 
             @Override
             public void surfaceDestroyed(SurfaceHolder holder) {
-
+                cameraSource.stop();
             }
         });
 
@@ -109,6 +109,7 @@ public class HashBarcodeScanner extends AppCompatActivity {
             public void receiveDetections(Detector.Detections<Barcode> detections) {
                 final SparseArray<Barcode> barcodes =  detections.getDetectedItems();
                 if(barcodes.size() > 0&&!qrcodescanned){
+                    barcode.release();
                     vibrate(200);
                     qrcodescanned=true;
                     Intent intent = new Intent();
