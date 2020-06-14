@@ -190,9 +190,9 @@ public class HashTextView extends ConstraintLayout {
                 }
         );
 
-        et.setHintTextColor(myColorStateList);
-        et.setHintTextColor(hintcolor);
-        textInputLayout.setHintTextColor(myColorStateList);
+        //et.setHintTextColor(myColorStateList);
+        //et.setHintTextColor(hintcolor);
+       // textInputLayout.setHintTextColor(myColorStateList);
 
 
 
